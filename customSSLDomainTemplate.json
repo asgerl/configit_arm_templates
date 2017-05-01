@@ -9,5 +9,14 @@
             }
         }
     },
-    "resources": []
+    "resources": [
+        /*{
+            "type":"Microsoft.Web/sites/hostnameBindings",
+            "name":"[parameters('customDomain')]",
+            "apiVersion":"2016-03-01",
+            "location":"[resourceGroup().location]",
+            "properties":{
+            }
+        }*/
+    ]
 }
