@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webAppName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the web app that you wish to create."
+            }
+        },
+        "customDomain": {
+            "type": "string",
+            "metadata": {
+                "description": "The custom hostname that you wish to add."
+            }
+        }
+    },
+    "resources": [
+        {
+            "type":"Microsoft.Web/sites/hostnameBindings",
+            "name":"[parameters('customDomain')]",
+            "apiVersion":"2016-03-01",
+            "location":"[resourceGroup().location]",
+            "properties":{
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Web/sites/',parameters('webAppName'))]"
+            ]
+        }
+    ]
+}
