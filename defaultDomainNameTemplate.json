@@ -41,7 +41,7 @@
         "displayName": "Website"
       },
       "properties": {
-        "name": "[parameters('webPageName')]",
+        "name": "DefaultyName",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
         "authentication": {
             "type": "Basic",
