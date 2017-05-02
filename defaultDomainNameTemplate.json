@@ -33,7 +33,7 @@
     },    
     {
       "apiVersion": "2016-03-01",
-      "name": "[parameters('webPageName')]",
+      "name": "aStaticDomainName",
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
       "tags": {
